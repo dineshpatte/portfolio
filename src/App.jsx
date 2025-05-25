@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router-dom'
 
 import Home from './pages/Home'
-import Navbar from './components/navbar'
-import Projects from './pages/projects'
-import ProjectDetail from './pages/projectsDetail'
-import Clone from './pages/clone'
+import Navbar from './components/Navbar'
+import Projects from './pages/Projects'
+import ProjectDetail from './pages/ProjectsDetail'
+import Clone from './pages/Clone'
 
 function App() {
   return (
