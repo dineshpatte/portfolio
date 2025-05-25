@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-export default function Navbar() {
+export default function navbar() {
   return (
     <nav className="bg-black px-4 py-3 flex justify-between items-center border-b border-gray-800 shadow-md">
       <h1 className="text-xl font-bold text-white">Dinesh's Portfolio</h1>
