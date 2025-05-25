@@ -188,11 +188,11 @@ export default function ProjectDetail() {
 
   if (!project) {
     return (
-      <div className="p-6 text-center bg-white dark:bg-black min-h-screen flex flex-col justify-center items-center">
+      <div className="p-6 text-center bg-white/30 dark:bg-black min-h-screen flex flex-col justify-center items-center">
         <p className="mb-4 text-lg font-semibold text-black dark:text-white">Project not found.</p>
         <button
           onClick={() => navigate(-1)}
-          className="px-4 py-2 bg-black text-white rounded border border-white hover:bg-white hover:text-black transition duration-300"
+          className="px-4 py-2 bg-black text-white rounded border border-white/30 hover:bg-white hover:text-black transition duration-300"
         >
           Go Back
         </button>
@@ -201,10 +201,10 @@ export default function ProjectDetail() {
   }
 
   return (
-  <div className="p-6 max-w-9xl mx-auto min-h-screen bg-white dark:bg-black text-black dark:text-white">
+  <div className="p-6 max-w-9xl mx-auto min-h-screen bg-white/30 dark:bg-black text-black dark:text-white">
     <button
       onClick={() => navigate(-1)}
-      className="mb-6 px-5 py-2 border border-white bg-black text-white font-semibold rounded hover:bg-white hover:text-black transition duration-300"
+      className="mb-6 px-5 py-2 border border-white/30 bg-black text-white font-semibold rounded hover:bg-white hover:text-black transition duration-300"
       aria-label="Back to Projects"
     >
       &larr; Back to Projects
@@ -218,7 +218,7 @@ export default function ProjectDetail() {
         <img
           src={project.images[0]}
           alt={`${project.title} main screenshot`}
-          className="w-full sm:w-4/5 lg:w-3/5 h-auto rounded-3xl border-2 border-white shadow-xl object-cover max-h-[700px]"
+          className="w-full sm:w-4/5 lg:w-3/5 h-auto rounded-3xl border-2 border-white/30 shadow-xl object-cover max-h-[700px]"
         />
       </div>
     )}
@@ -250,10 +250,11 @@ export default function ProjectDetail() {
 
     {/* Tech Stack */}
     <div className="mb-10 flex flex-wrap justify-center gap-4">
+      
       {project.techStack?.map((tech, idx) => (
         <button
           key={idx}
-          className="px-4 py-2 bg-black text-white border border-white rounded-md hover:bg-white hover:text-black transition duration-300 font-medium select-none"
+          className="px-4 py-2 bg-black text-white border border-white/30 rounded-md hover:bg-white hover:text-black transition duration-300 font-medium select-none"
           type="button"
         >
           {tech}
@@ -267,13 +268,13 @@ export default function ProjectDetail() {
         href={project.github}
         target="_blank"
         rel="noopener noreferrer"
-        className="px-6 py-3 border border-white rounded text-white bg-black font-semibold hover:bg-white hover:text-black transition duration-300"
+        className="px-6 py-3 border border-white/30 rounded text-black bg-white font-semibold hover:bg-black hover:text-white transition duration-300"
       >
         View Source
       </a>
       <button
         onClick={() => navigate("/clone")}
-        className="px-6 py-3 border border-white rounded text-white bg-black font-semibold hover:bg-white hover:text-black transition duration-300"
+        className="px-6 py-3 border border-white/30 rounded text-black bg-white font-semibold hover:bg-black hover:text-white transition duration-300"
         type="button"
       >
         Clone Project

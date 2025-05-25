@@ -43,7 +43,7 @@ export default function Home() {
           <img
             src={profile}
             alt="Profile"
-            className="w-48 h-48 lg:w-64 lg:h-64 rounded-full border-2 border-white object-cover shadow-lg"
+            className="w-48 h-48 lg:w-64 lg:h-64 rounded-full border-2 border-white/30 object-cover shadow-lg"
           />
           <div className="flex-1 text-center lg:text-left">
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">Pattem Guru Dinesh</h1>
@@ -53,27 +53,27 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link
                 to="/projects"
-                className="border border-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                className="border border-white/30 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
               >
                 View All Projects <ExternalLink className="inline w-5 h-5" />
               </Link>
               <a
                 href="https://github.com/dineshpatte"
-                className="border border-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                className="border border-white/30 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
               >
                 <Github className="inline w-5 h-5 mr-2" /> GitHub
               </a>
                <a
                href="https://www.linkedin.com/in/pattem-dinesh-44101b342"
 
-                className="border border-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                className="border border-white/30 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center  justify-center"
               >
-                <Linkedin className="inline w-5 h-5 mr-2" /> Linkedin
+                <Linkedin className="inline w-5 h-5 mr-2 " /> Linkedin
               </a>
 
               <a
   href="mailto:009pattemdinesh@gmail.com"
-  className="border border-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center"
+  className="border border-white/30 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center"
   aria-label="Send email to Pattem Guru Dinesh"
 >
   <Mail className="w-5 h-5 mr-2" />
@@ -94,37 +94,38 @@ export default function Home() {
             <p className="text-lg">Some of my recent work that showcases my skills</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {topProjects.map((project) => (
-              <div
-                key={project.id}
-                className="border border-white p-6 rounded-xl transition-all duration-300 transform hover:scale-105"
-              >
-                <div className="mb-4">
-                  <img
-                    src={project.images[0] || "/placeholder.svg"}
-                    alt={project.title}
-                    className="w-full h-48 object-cover rounded-lg bg-black border border-white"
-                  />
-                </div>
-                <h3 className="text-xl font-bold mb-3 underline underline-offset-4">{project.title}</h3>
-                <p className="mb-6 leading-relaxed">{project.description}</p>
-                <div className="flex gap-3">
-                  <Link
-                    to={`/projects/${project.id}`}
-                    className="flex-1 border border-white py-2.5 px-4 rounded-lg font-medium transition-transform duration-300 transform hover:scale-105 text-center"
-                  >
-                    View Project <ExternalLink className="inline w-4 h-4" />
-                  </Link>
-                  <a
-                    href={project.github}
-                    className="p-2.5 border border-white rounded-lg transition-transform duration-300 transform hover:scale-105"
-                  >
-                    <Github className="w-5 h-5" />
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
+  {topProjects.map((project) => (
+    <div
+      key={project.id}
+      className="border border-white/20 p-6 rounded-xl transition-all duration-300 transform hover:scale-105 flex flex-col"
+    >
+      <div className="mb-4">
+        <img
+          src={project.images[0] || "/placeholder.svg"}
+          alt={project.title}
+          className="w-full h-48 object-cover rounded-lg bg-black border border-white/30"
+        />
+      </div>
+      <h3 className="text-xl font-bold mb-3 underline underline-offset-4">{project.title}</h3>
+      <p className="leading-relaxed mb-6 flex-grow">{project.description}</p>
+      <div className="flex gap-3 mt-auto">
+        <Link
+          to={`/projects/${project.id}`}
+          className="flex-1 border border-white/30 py-2.5 px-4 rounded-lg font-medium transition-transform duration-300 transform hover:scale-105 text-center"
+        >
+          View Project <ExternalLink className="inline w-4 h-4" />
+        </Link>
+        <a
+          href={project.github}
+          className="p-2.5 border border-white/30 rounded-lg transition-transform duration-300 transform hover:scale-105"
+        >
+          <Github className="w-5 h-5" />
+        </a>
+      </div>
+    </div>
+  ))}
+</div>
+
         </div>
       </section>
 
@@ -141,7 +142,7 @@ export default function Home() {
             ].map((skill) => (
               <span
                 key={skill}
-                className="border border-white px-6 py-3 rounded-lg font-medium transition-transform duration-300 transform hover:scale-110"
+                className="border border-white/30 px-6 py-3 rounded-lg font-medium transition-transform duration-300 transform hover:scale-110"
               >
                 {skill}
               </span>

@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Clone() {
+    const navigate = useNavigate()
+
   return (
     <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white p-6">
       <div className="max-w-3xl mx-auto">
@@ -43,6 +46,14 @@ npm run dev`}
             </pre>
           </li>
         </ol>
+      <button
+  onClick={() => navigate(-1)}
+  className="border border-white/30 py-2.5 px-4 rounded-lg font-medium transition-transform duration-300 transform hover:scale-105 text-center mt-4"
+>
+  Go Back
+</button>
+
+
       </div>
     </div>
   );

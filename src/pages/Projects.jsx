@@ -64,46 +64,48 @@ export default function Projects() {
     },
   ];
 
-  return (
-    <div className="bg-black text-white py-16 px-6 min-h-screen">
-      <div className="max-w-screen-xl mx-auto">
-        <h2 className="text-4xl font-bold mb-12 text-center">All Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              className="group bg-black rounded-2xl p-6 shadow-md border-2 border-white
-                transition duration-300 hover:scale-[1.04] hover:shadow-[0_0_15px_3px_rgba(255,255,255,0.3)]"
-            >
-              <img
-                src={project.images[0] || "/placeholder.svg"}
-                alt={project.title}
-                className="w-full h-56 object-cover rounded-lg bg-white/5 mb-5"
-              />
-              <h3 className="text-xl font-semibold mb-3 group-hover:text-white/90 transition-colors">
-                {project.title}
-              </h3>
-              <p className="text-white/70 mb-6 leading-relaxed">{project.description}</p>
-              <div className="flex justify-between text-sm">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border border-white rounded px-3 py-1 text-white/70 hover:text-white hover:bg-white/10 transition"
-                >
-                  GitHub
-                </a>
-                <Link
-                  to={`/projects/${project.id}`}
-                  className="border border-white rounded px-3 py-1 text-white/70 hover:text-white hover:bg-white/10 transition"
-                >
-                  View Project
-                </Link>
-              </div>
+ return (
+  <div className="bg-black text-white py-16 px-6 min-h-screen">
+    <div className="max-w-screen-xl mx-auto">
+      <h2 className="text-4xl font-bold mb-12 text-center">All Projects</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects.map((project) => (
+          <div
+            key={project.id}
+            className="group bg-black rounded-2xl p-6 shadow-md border-2 border-white/30
+              transition duration-300 hover:scale-[1.04] hover:shadow-[0_0_15px_3px_rgba(255,255,255,0.3)]
+              flex flex-col"
+          >
+            <img
+              src={project.images[0] || "/placeholder.svg"}
+              alt={project.title}
+              className="w-full h-56 object-cover rounded-lg bg-white/5 mb-5"
+            />
+            <h3 className="text-xl font-semibold mb-3 group-hover:text-white/90 transition-colors">
+              {project.title}
+            </h3>
+            <p className="text-white/70 mb-6 leading-relaxed flex-grow">{project.description}</p>
+            <div className="flex justify-between text-sm mt-auto">
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-white/30 rounded px-3 py-1 text-white/70 hover:text-white hover:bg-white/10 transition"
+              >
+                GitHub
+              </a>
+              <Link
+                to={`/projects/${project.id}`}
+                className="border border-white/30 rounded px-3 py-1 text-white/70 hover:text-white hover:bg-white/10 transition"
+              >
+                View Project
+              </Link>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
-  );
+  </div>
+);
+
 }
