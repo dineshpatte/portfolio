@@ -9,7 +9,7 @@ import Clone from './pages/clone'
 function App() {
   return (
     <div>
-      <navbarr />
+      <navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
