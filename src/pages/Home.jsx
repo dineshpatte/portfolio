@@ -63,13 +63,18 @@ export default function Home() {
               >
                 <Github className="inline w-5 h-5 mr-2" /> GitHub
               </a>
-               <a
-               href="https://www.linkedin.com/in/pattem-dinesh-44101b342"
+              <a
+  href="https://www.linkedin.com/in/pattem-dinesh-44101b342"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="border border-white/30 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+>
+  <div className="flex items-center justify-center gap-2">
+    <Linkedin className="w-5 h-5" />
+ <p className="mt-1">Linkedin</p>
+  </div>
+</a>
 
-                className="border border-white/30 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center  justify-center"
-              >
-                <Linkedin className="inline w-5 h-5 mr-2 " /> Linkedin
-              </a>
 
               <a
   href="mailto:009pattemdinesh@gmail.com"
