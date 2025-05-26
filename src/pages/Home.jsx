@@ -52,14 +52,14 @@ export default function Home() {
               Hey, I’m Pattem Guru Dinesh — a CS undergrad and full stack web developer who loves crafting sleek, functional web apps. I enjoy turning ideas into real-world projects using the MERN stack. Currently diving into Java and Spring Boot to sharpen my backend skills.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-           <a
-  href="/resume.pdf"
-  download
-  className="border border-white/30 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
->
-  <ExternalLink className="inline w-5 h-5" />
-  Resume
-</a>
+                        <a
+                href="/newresume.pdf"
+                download
+                className="border border-white/30 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2 justify-center"
+              >
+                <ExternalLink className="inline w-5 h-5" />
+                Resume
+              </a>
 
 
               <a
@@ -68,27 +68,27 @@ export default function Home() {
               >
                 <Github className="inline w-5 h-5 mr-2" /> GitHub
               </a>
-              <a
-  href="https://www.linkedin.com/in/pattem-dinesh-44101b342"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="border border-white/30 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
->
-  <div className="flex items-center justify-center gap-2">
-    <Linkedin className="w-5 h-5" />
- <p className="mt-1">Linkedin</p>
-  </div>
-</a>
+                            <a
+                href="https://www.linkedin.com/in/pattem-dinesh-44101b342"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-white/30 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+              >
+                <div className="flex items-center justify-center gap-2">
+                  <Linkedin className="w-5 h-5" />
+              <p className="mt-1">Linkedin</p>
+                </div>
+              </a>
 
 
-              <a
-  href="mailto:009pattemdinesh@gmail.com"
-  className="border border-white/30 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center"
-  aria-label="Send email to Pattem Guru Dinesh"
->
-  <Mail className="w-5 h-5 mr-2" />
-  Mail
-</a>
+                          <a
+              href="mailto:009pattemdinesh@gmail.com"
+              className="border border-white/30 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
+              aria-label="Send email to Pattem Guru Dinesh"
+            >
+              <Mail className="w-5 h-5 mr-2" />
+              Mail
+            </a>
 
 
             </div>

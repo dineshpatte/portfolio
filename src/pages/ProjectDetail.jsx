@@ -224,23 +224,34 @@ export default function ProjectDetail() {
     )}
 
     {/* Secondary Images */}
-    {project.images.length > 1 && (
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
-        {project.images.slice(1).map((src, idx) => (
-          <div
-            key={idx}
-            className="overflow-hidden rounded-2xl border-2 border-black bg-white shadow-md hover:shadow-lg hover:border-white transition duration-300 h-60 sm:h-72 md:h-80"
-          >
-            <img
-              src={src}
-              alt={`${project.title} screenshot ${idx + 2}`}
-              className="w-full  object-cover transform transition-transform duration-500 ease-in-out hover:scale-110"
-              loading="lazy"
-            />
-          </div>
-        ))}
+   {project.images.length > 1 && (
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+    {project.images.slice(1).map((src, idx) => (
+      <div
+        key={idx}
+        className="overflow-hidden rounded-2xl border-2 border-black bg-white shadow-md hover:shadow-lg hover:border-white transition duration-300"
+      >
+        <div
+          className="relative w-full overflow-hidden rounded-lg"
+          style={{ paddingTop: '56.25%' }} // 16:9 aspect ratio
+        >
+          <img
+            src={src}
+            alt={`${project.title} screenshot ${idx + 2}`}
+            className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+            loading="lazy"
+          />
+        </div>
       </div>
-    )}
+    ))}
+  </div>
+)}
+
+
+
+
+
+       
 
     {/* Description */}
     <p className="mb-6 text-lg text-center">{project.description}</p>
