@@ -5,6 +5,7 @@ import paper from "../assets/paperquillhome.jpeg"
 import eco from "../assets/ecologhome.png"
 import digi from "../assets/digidiner.png"
 
+
 export default function Home() {
   const projects = [
     {
@@ -51,12 +52,16 @@ export default function Home() {
               Hey, I’m Pattem Guru Dinesh — a CS undergrad and full stack web developer who loves crafting sleek, functional web apps. I enjoy turning ideas into real-world projects using the MERN stack. Currently diving into Java and Spring Boot to sharpen my backend skills.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Link
-                to="/projects"
-                className="border border-white/30 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
-              >
-                View All Projects <ExternalLink className="inline w-5 h-5" />
-              </Link>
+           <a
+  href="/resume.pdf"
+  download
+  className="border border-white/30 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+>
+  <ExternalLink className="inline w-5 h-5" />
+  Resume
+</a>
+
+
               <a
                 href="https://github.com/dineshpatte"
                 className="border border-white/30 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
