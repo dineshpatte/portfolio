@@ -1,4 +1,6 @@
 import { useRef } from "react";
+import forestImage from "../assets/image.png";
+import forestPdf from "../assets/anotomy-NF.pdf";
 
 const sections = [
   {
@@ -283,7 +285,7 @@ export default function NottinghamForest() {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/src/assets/anotomy-NF.pdf";
+    link.href = forestPdf;
     link.download = "anotomy-NF.pdf";
     link.click();
   };
@@ -348,7 +350,7 @@ export default function NottinghamForest() {
         />
 
         <img
-          src="/src/assets/image.png"
+          src={forestImage}
           alt="Nottingham Forest"
           style={{
             width: "100%",
