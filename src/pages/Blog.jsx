@@ -10,6 +10,16 @@ const blogs = [
     tag: "Football",
     date: "May 2026",
   },
+
+  {
+    slug: "ac-milan",
+    title: "The Anatomy of AC Milan",
+    subtitle: "Glory, Struggles and the Rossoneri Legacy",
+    description:
+      "From European dominance to rebuilding years — the story of AC Milan, one of Italy's most historic football clubs.",
+    tag: "Football",
+    date: "August 2026",
+  },
   // Add future blogs here
 ];
 
